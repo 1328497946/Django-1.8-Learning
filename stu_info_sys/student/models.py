@@ -114,7 +114,7 @@ class CHANGE(models.Model):
 
 
     def __str__(self):
-        return self.STUDENTID
+        return self.DESCRIPTION
 
     
 class REWARD(models.Model):
@@ -132,11 +132,11 @@ class REWARD(models.Model):
 
 
     def __str__(self):
-        return self.STUDENTID
+        return self.DESCRIPTION
 
 
 class PUNISH(models.Model):
-    enable_choice = (('1','T'), ('0','F'))
+    enable_choice = ((True, '是'), (False, '否'))
     ID = models.CharField(max_length=20, verbose_name="记录号", primary_key=True)
     STUDENTID = models.ForeignKey(STUDENT, verbose_name="学号", on_delete=models.CASCADE)
     LEVELS = models.ForeignKey(PUNISH_LEVELS, verbose_name="级别代码", on_delete=models.CASCADE)
@@ -152,5 +152,5 @@ class PUNISH(models.Model):
 
 
     def __str__(self):
-        return self.STUDENTID
+        return self.DESCRIPTION
 # Create your models here.

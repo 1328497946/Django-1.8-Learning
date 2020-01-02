@@ -61,16 +61,15 @@ class PUNAdmin(admin.ModelAdmin):
             'ID',
             'STUDENTID',
             'ENABLE',
-            'LEVELS',
             'DESCRIPTION',
             'REC_TIME',
     ]
     search_fields = ('ID', 'STUDENTID')
     list_filter = ('LEVELS', 'ENABLE')
 
-admin.site.register(CHANGE_CODE)
-admin.site.register(PUNISH_LEVELS)
-admin.site.register(REWARD_LEVELS)
+# admin.site.register(CHANGE_CODE)
+# admin.site.register(PUNISH_LEVELS)
+# admin.site.register(REWARD_LEVELS)
 admin.site.register(DEPARTMENT, DEPAdmin)
 admin.site.register(CLASS, CLAAdmin)
 admin.site.register(STUDENT, STUAdmin)
